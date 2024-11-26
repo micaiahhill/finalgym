@@ -47,4 +47,5 @@ public class MemberController {
     public String deleteMember(@PathVariable int id) {
         return memberService.deleteMember(id) ? "Member deleted successfully!" : "Failed to delete member.";
     }
+    
 }

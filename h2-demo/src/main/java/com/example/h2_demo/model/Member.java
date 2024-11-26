@@ -2,8 +2,8 @@ package com.example.h2_demo.model;
 
 public class Member {
     private int memberId;
-    private String firstName;
-    private String lastName;
+    private String FirstName;
+    private String LastName;
     private String email;
     private String membershipType;
 
@@ -17,19 +17,19 @@ public class Member {
     }
 
     public String getFirstName() {
-        return firstName;
+        return FirstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.FirstName = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.LastName = lastName;
     }
 
     public String getEmail() {
