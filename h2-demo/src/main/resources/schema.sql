@@ -17,11 +17,13 @@ CREATE TABLE Instructor (
 
 --- Fall 2024 for class offers and Spring 2025 class offers (class ID, class type , location, instrucor )
 CREATE TABLE Class_Schedule (
-    ClassID INT AUTO_INCREMENT PRIMARY KEY,
-    ClassType VARCHAR(50) NOT NULL,
-    Location VARCHAR(100),
+    ClassID INT AUTO_INCREMENT PRIMARY KEY, 
+    ClassType VARCHAR(50) NOT NULL, --Class Type
+    Location VARCHAR(100), 
     InstructorID INT,
     Semester VARCHAR(20),
+    ClassTime TIME NOT NULL,
+    ClassDay VARCHAR(20) NOT NULL,
     FOREIGN KEY (InstructorID) REFERENCES Instructor(InstructorID)
 );
 

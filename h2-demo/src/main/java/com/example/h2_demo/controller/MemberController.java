@@ -1,20 +1,29 @@
 package com.example.h2_demo.controller;
 
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 import com.example.h2_demo.model.Member;
 import com.example.h2_demo.service.MemberService;
 
 import java.util.List;
+import java.util.Map;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/api/members")
 public class MemberController {
 
     private final MemberService memberService;
+    private final JdbcTemplate jdbcTemplate;
 
-    public MemberController(MemberService memberService) {
+
+    public MemberController(MemberService memberService, JdbcTemplate jdbcTemplate) {
         this.memberService = memberService;
+        this.jdbcTemplate = jdbcTemplate;
+
     }
 
     // Add a new member
@@ -47,5 +56,15 @@ public class MemberController {
     public String deleteMember(@PathVariable int id) {
         return memberService.deleteMember(id) ? "Member deleted successfully!" : "Failed to delete member.";
     }
+
+// Get a custom query 
+
+@PostMapping("/query")
+public List<Map<String,Object>> executeQuery(@RequestBody String query) {
+    
+    
+    return jdbcTemplate.queryForList(query);
+}
+
     
 }

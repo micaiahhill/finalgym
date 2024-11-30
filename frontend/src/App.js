@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import SqlQueryForm from "./componets/SqlQueryForm";
+import QueryExecutor from "./componets/QueryExecutor";
 import { Container, Typography, Box } from "@mui/material";
 import "./App.css";
 
@@ -32,10 +32,7 @@ function App() {
         ))}
       </div>
       <Container>
-      <Box sx={{ textAlign: "center", marginTop: "20px" }}>
-        <Typography variant="h3">SQL Query Executor</Typography>
-      </Box>
-      <SqlQueryForm />
+      <QueryExecutor/>
     </Container>
     </div>
   );

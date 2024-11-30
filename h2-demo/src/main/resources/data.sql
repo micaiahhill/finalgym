@@ -32,18 +32,18 @@ VALUES
 (11, 'Ashton', 'Zee', 'Yoga Certification', 'Ashzee@yahoo.com');
 
 -- Insert Class Schedule
-INSERT INTO Class_Schedule (ClassID, ClassType, Location, InstructorID, Semester) 
+INSERT INTO Class_Schedule (ClassID, ClassType, Location, InstructorID, Semester,ClassTime,ClassDay) 
 VALUES 
-(1, 'Yoga', 'Room A', 1, 'Fall 2024'),
-(2, 'Pilates', 'Studio 2', 2, 'Spring 2025'),
-(3, 'Boxing', 'Studio 3', 3, 'Fall 2024'),
-(4, 'Yoga', 'Studio 1', 4, 'Spring 2025'),
-(5, 'Pilates', 'Studio 2', 5, 'Fall 2024'),
-(6, 'Boxing', 'Studio 3', 6, 'Spring 2025'),
-(7, 'Yoga', 'Studio 1', 7, 'Fall 2024'),
-(8, 'Pilates', 'Studio 2', 8, 'Spring 2025'),
-(9, 'Boxing', 'Studio 3', 9, 'Fall 2024'),
-(10, 'Yoga', 'Studio 1', 10, 'Spring 2025');
+(1, 'Yoga', 'Room A', 1, 'Fall 2024', '10:00:00', 'Monday'),
+(2, 'Pilates', 'Studio 2', 2, 'Spring 2025', '14:00:00', 'Tuesday'),
+(3, 'Boxing', 'Studio 3', 3, 'Fall 2024', '16:00:00', 'Wednesday'),
+(4, 'Yoga', 'Studio 1', 4, 'Spring 2025', '09:00:00', 'Thursday'),
+(5, 'Pilates', 'Studio 2', 5, 'Fall 2024', '13:00:00', 'Friday'),
+(6, 'Boxing', 'Studio 3', 6, 'Spring 2025', '15:00:00', 'Saturday'),
+(7, 'Yoga', 'Studio 1', 7, 'Fall 2024', '11:00:00', 'Sunday'),
+(8, 'Pilates', 'Studio 2', 8, 'Spring 2025', '12:00:00', 'Monday'),
+(9, 'Boxing', 'Studio 3', 9, 'Fall 2024', '17:00:00', 'Tuesday'),
+(10, 'Yoga', 'Studio 1', 10, 'Spring 2025', '08:00:00', 'Wednesday');
 
 -- Insert Class Attendance
 INSERT INTO Class_Attendance (MemberID, ClassID, AttendanceDate) 
