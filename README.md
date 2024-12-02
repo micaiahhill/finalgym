@@ -18,8 +18,9 @@ Follow these steps to set up and run the project:
 ### Backend (Spring Boot)
 
 1. Open the backend project in your preferred Java IDE (VS Code is recommended).
-2. Build the project by clicking on the application then run (MAC users just click run).
-3. Start the backend server by running the main class: `H2DemoApplication`.  
+2. Build the project using Maven.
+3. Build the project by clicking on the application then run (MAC users just click run).
+4. Start the backend server by running the main class: `H2DemoApplication`.  
    This will start the backend server on port 8080.
 
 ### Frontend (React)
