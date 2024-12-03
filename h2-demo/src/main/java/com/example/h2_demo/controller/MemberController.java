@@ -3,13 +3,14 @@ package com.example.h2_demo.controller;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.h2_demo.model.ClassScheduleDTO;
 import com.example.h2_demo.model.Member;
 import com.example.h2_demo.service.MemberService;
 
 import java.util.List;
 import java.util.Map;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RestController
@@ -29,6 +30,7 @@ public class MemberController {
     // Add a new member
     @PostMapping
     public String addMember(@RequestBody Member member) {
+          System.out.println("Received member: " + member); 
         return memberService.addMember(member) ? "Member added successfully!" : "Failed to add member.";
     }
 
@@ -57,6 +59,14 @@ public class MemberController {
         return memberService.deleteMember(id) ? "Member deleted successfully!" : "Failed to delete member.";
     }
 
+
+    // Get Classes
+    @GetMapping("/classes")
+    public List<ClassScheduleDTO> getAllClasses() {
+        return memberService.getAllClasses();
+    }
+    
+
 // Get a custom query 
 
 @PostMapping("/query")
@@ -66,5 +76,10 @@ public List<Map<String,Object>> executeQuery(@RequestBody String query) {
     return jdbcTemplate.queryForList(query);
 }
 
+  // Retrieve class enrollment details by class name
+  @GetMapping("/classes/enrollment")
+  public List<Map<String, Object>> getClassEnrollmentDetails(@RequestParam String classType) {
+      return memberService.getClassEnrollmentDetails(classType);
+  }
     
 }

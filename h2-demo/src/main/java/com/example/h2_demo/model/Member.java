@@ -6,6 +6,7 @@ public class Member {
     private String LastName;
     private String email;
     private String membershipType;
+   
 
     // Getters and setters
     public int getMemberId() {
@@ -39,6 +40,7 @@ public class Member {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     public String getMembershipType() {
         return membershipType;
