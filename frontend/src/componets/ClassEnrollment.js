@@ -22,7 +22,7 @@ function ClassEnrollment() {
   const [error, setError] = useState("");
 
   const fetchEnrollmentDetails = () => {
-    setError(""); // Clear previous errors
+    setError(""); 
     axios
       .get(`http://localhost:8080/api/members/classes/enrollment?classType=${classType}`)
       .then((response) => {

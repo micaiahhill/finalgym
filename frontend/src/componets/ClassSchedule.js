@@ -17,7 +17,6 @@ function ClassSchedule() {
   const [filteredClasses, setFilteredClasses] = useState([]);
   const [day, setDay] = useState("");
 
-  // Fetch all classes
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/members/classes")
@@ -29,7 +28,7 @@ function ClassSchedule() {
       });
   }, []);
 
-  // Filter classes by day
+  
   const handleDayChange = (selectedDay) => {
     setDay(selectedDay);
     setFilteredClasses(classes.filter((c) => c.classDay === selectedDay));

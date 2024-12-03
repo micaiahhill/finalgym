@@ -20,12 +20,11 @@ function App() {
   const [members, setMembers] = useState([]);
   const [selectedMemberId, setSelectedMemberId] = useState(null);
 
-  // Fetch members from the backend
   const fetchMembers = () => {
     axios
       .get("http://localhost:8080/api/members")
       .then((response) => {
-        console.log("Fetched members:", response.data); // Debugging output
+        console.log("Fetched members:", response.data); 
         setMembers(response.data);
       })
       .catch((error) => {
@@ -33,7 +32,6 @@ function App() {
       });
   };
 
-  // Handle selecting a member for updating
   const handleSelectMember = (id) => {
     setSelectedMemberId(id);
   };
@@ -57,7 +55,6 @@ function App() {
 
         <Container sx={{ marginTop: "2rem" }}>
           <Routes>
-            {/* Default Route: Display Members */}
             <Route
               path="/"
               element={
@@ -146,7 +143,6 @@ function App() {
               }
             />
 
-            {/* Add Member Route */}
             <Route
               path="/add-member"
               element={<AddMember fetchMembers={fetchMembers} />}
