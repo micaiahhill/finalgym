@@ -1,0 +1,72 @@
+FIRST TEST QUERY:
+Find Members Who Attended on a Specific Day: 
+
+SELECT  
+    Member.FirstName, 
+    Member.LastName, 
+    Class_Schedule.ClassType, 
+    Class_Schedule.ClassDay, 
+    Class_Schedule.ClassTime 
+FROM  
+    Member 
+JOIN  
+    Class_Attendance ON Member.MemberID = Class_Attendance.MemberID 
+JOIN  
+    Class_Schedule ON Class_Attendance.ClassID = Class_Schedule.ClassID 
+WHERE  
+    Class_Schedule.ClassDay = 'Monday' 
+ORDER BY  
+    Member.LastName, Class_Schedule.ClassTime; 
+
+
+SECOND TEST QUERY:
+Calculate the total payment amount for each membership type:
+
+SELECT  
+    MembershipType, 
+    SUM(Amount) AS TotalPayments 
+FROM  
+    Payment 
+GROUP BY  
+    MembershipType 
+ORDER BY  
+    TotalPayments DESC;  
+
+
+THIRD TEST QUERY:
+Instructors and total number of classes they teach: 
+SELECT  
+    Instructor.FirstName, 
+    Instructor.LastName, 
+    COUNT(Class_Schedule.ClassID) AS TotalClasses 
+FROM  
+    Instructor 
+JOIN  
+    Class_Schedule ON Instructor.InstructorID = Class_Schedule.InstructorID 
+GROUP BY  
+    Instructor.InstructorID, Instructor.FirstName, Instructor.LastName 
+ORDER BY  
+    TotalClasses DESC; 
+
+
+FOURTH TEST QUERY:
+See which instructors teach a class and what time and day it is:
+
+SELECT  
+    Instructor.FirstName AS InstructorFirstName, 
+    Instructor.LastName AS InstructorLastName, 
+    Class_Schedule.ClassType, 
+    Class_Schedule.ClassTime, 
+    Class_Schedule.ClassDay 
+FROM  
+    Class_Schedule 
+JOIN  
+    Instructor ON Class_Schedule.InstructorID = Instructor.InstructorID 
+WHERE  
+    Class_Schedule.ClassType = 'Yoga'; 
+
+
+FIFTH TEST QUERY:
+Members with no attendance: 
+
+SELECT Member.FirstName, Member.LastName FROM Member LEFT JOIN Class_Attendance ON Member.MemberID = Class_Attendance.MemberID WHERE Class_Attendance.AttendanceID IS NULL; 

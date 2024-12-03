@@ -1,70 +1,79 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gym Management System
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This project is a gym management system designed to streamline the operations of a fitness center. It allows you to manage members, class schedules, and instructors. The system includes:
 
-### `npm start`
+- **Backend**: Built with Spring Boot.
+- **Frontend**: Built with React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the project, ensure you have the following prerequisites installed on your system:
 
-### `npm test`
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) - Version 17 or higher.
+- [Node.js](https://nodejs.org/) - Version 18.15.0 or higher. 
+- [npm](https://www.npmjs.com/) - This is included with Node.js.
+- [Visual Studio Code](https://code.visualstudio.com/download) - Recommended for running and building the Spring Boot application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+Follow these steps to get the project up and running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend (Spring Boot)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open the backend project in your preferred Java IDE (VS Code is recommended).
+2. Build the project using Maven.
+3. Run the main class **H2DemoApplication** to start the backend server. This will run the backend on `http://localhost:8080`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend (React)
 
-### `npm run eject`
+1. Open a terminal and navigate to the `frontend` directory of the project, or open the frontend folder in Visual Studio Code.
+2. Install project dependencies by running:
+   ```bash
+   npm install
+   ```
+3. Start the React development server by running:
+   ```bash
+   npm start
+   ```
+   This will start the frontend application on `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Database Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+By default, this project uses an in-memory H2 SQL database for development. The database is automatically configured using the following files in the backend's `resources` folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `schema.sql: Defines the database structure.
+- `data.sql`: Populates the database with initial data (e.g., members, classes, instructors).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To customize the database schema or sample data, modify these files.
 
-## Learn More
+### Accessing the Application User Interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Once both the frontend and backend are running:
+- Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the frontend.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Accessing the Database Console
 
-### Code Splitting
+To access the H2 database console:
+1. Open your web browser and go to [http://localhost:8080/h2-console](http://localhost:8080/h2-console).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The H2 console is helpful for testing queries and examining the database structure. Note that the in-memory database resets each time the application restarts.
 
-### Analyzing the Bundle Size
+### Additional Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Ensure both the frontend (port 3000) and backend (port 8080) are running for the application to work correctly.
+- Use the frontend interface to add, view, update, or delete records in the database.
+- The SQL execution feature is available on the frontend for testing pure SQL statements.
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Use the web interface to manage gym members, classes, and schedules.
+- Explore the class schedule, enrollments, and other features using the user-friendly interface.
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Micaiah Hill
+- Ariel Jupiter
+- Tyler Scott
