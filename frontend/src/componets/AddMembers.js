@@ -30,9 +30,8 @@ function AddMember({ fetchMembers }) {
     e.preventDefault();
     try {
       await axios.post("http://localhost:8080/api/members", newMember);
-      alert("Member added successfully!"); // Success message
-      fetchMembers(); // Refresh the members list
-      // Reset the form
+      alert("Member added successfully!"); // good message!
+      fetchMembers(); // members list
       setNewMember({
         firstName: "",
         lastName: "",

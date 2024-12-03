@@ -38,7 +38,7 @@ function App() {
     setTabValue(newValue);
   };
 
-  // Handle selecting a member for updating
+  
   const handleSelectMember = (id) => {
     setSelectedMemberId(id);
   };
@@ -158,7 +158,6 @@ function App() {
             }
           />
 
-          {/* Add Member Route */}
           <Route
             path="/add-member"
             element={<AddMember fetchMembers={fetchMembers} />}
