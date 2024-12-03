@@ -2,19 +2,19 @@
 --VALUES ('John', 'Doe', 'Sales', 50000.00);
 
 -- Insert Members
-INSERT INTO Member (MemberID, FirstName, LastName, Email, MembershipType) 
+INSERT INTO Member ( FirstName, LastName, Email, MembershipType) 
 VALUES 
-(1, 'Alice', 'Brown', 'alice.brown@example.com', 'Gold'),
-(2, 'James', 'Jones', 'jj1234@gmail.com', 'Gold'),
-(3, 'Mary', 'Mcmillian', 'MaryMC56@yahoo.com', 'Silver'),
-(4, 'Robert', 'Hill', 'HillR@yahoo.com', 'Bronze'),
-(5, 'Jennifer', 'Gatson', 'JGatson78@gmail.com', 'Bronze'),
-(6, 'David', 'Henson', 'Davidhenson@yahoo.com', 'Silver'),
-(7, 'Jessica', 'Williams', 'JessWilliams1153@aos.com', 'Gold'),
-(8, 'Daniel', 'Baker', 'BakerDan@gmail.com', 'Silver'),
-(9, 'Karen', 'Jackson', 'Kar3nJacks0n@yahoo.com', 'Bronze'),
-(10, 'Mark', 'Acker', 'Macker@gmail.com', 'Gold'),
-(11, 'Laura', 'Clark', 'LauraClark@gmail.com', 'Silver');
+( 'Alice', 'Brown', 'alice.brown@example.com', 'Gold'),
+( 'James', 'Jones', 'jj1234@gmail.com', 'Gold'),
+( 'Mary', 'Mcmillian', 'MaryMC56@yahoo.com', 'Silver'),
+( 'Robert', 'Hill', 'HillR@yahoo.com', 'Bronze'),
+( 'Jennifer', 'Gatson', 'JGatson78@gmail.com', 'Bronze'),
+( 'David', 'Henson', 'Davidhenson@yahoo.com', 'Silver'),
+( 'Jessica', 'Williams', 'JessWilliams1153@aos.com', 'Gold'),
+( 'Daniel', 'Baker', 'BakerDan@gmail.com', 'Silver'),
+( 'Karen', 'Jackson', 'Kar3nJacks0n@yahoo.com', 'Bronze'),
+( 'Mark', 'Acker', 'Macker@gmail.com', 'Gold'),
+( 'Laura', 'Clark', 'LauraClark@gmail.com', 'Silver');
 
 -- Insert Instructors
 INSERT INTO Instructor (InstructorID, FirstName, LastName, Certification, ContactInfo) 
