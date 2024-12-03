@@ -30,11 +30,15 @@ Follow these steps to get the project up and running:
 ### Frontend (React)
 
 1. Open a terminal and navigate to the `frontend` directory of the project, or open the frontend folder in Visual Studio Code.
-2. Install project dependencies by running:
+2. Go into the frontend directory
+   ```bash
+   cd frontend
+   ```
+3. Install project dependencies by running:
    ```bash
    npm install
    ```
-3. Start the React development server by running:
+4. Start the React development server by running:
    ```bash
    npm start
    ```
