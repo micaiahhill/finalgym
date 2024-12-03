@@ -1,7 +1,3 @@
-Here is your provided content reformatted into the specified structure:
-
----
-
 # Gym Management System
 
 ## Introduction
@@ -47,8 +43,8 @@ Follow these steps to get the project up and running:
 
 By default, this project uses an in-memory H2 SQL database for development. The database is automatically configured using the following files in the backend's `resources` folder:
 
-- **`schema.sql`**: Defines the database structure.
-- **`data.sql`**: Populates the database with initial data (e.g., members, classes, instructors).
+- `schema.sql: Defines the database structure.
+- `data.sql`: Populates the database with initial data (e.g., members, classes, instructors).
 
 To customize the database schema or sample data, modify these files.
 
@@ -77,10 +73,6 @@ The H2 console is helpful for testing queries and examining the database structu
 
 ## Authors
 
-- **Micaiah Hill**
-- **Ariel Jupiter**
-- **Tyler Scott**
-
---- 
-
-This format is now ready to be used as a `README.md` on GitHub. Let me know if any further edits are needed!
+- Micaiah Hill
+- Ariel Jupiter
+- Tyler Scott
